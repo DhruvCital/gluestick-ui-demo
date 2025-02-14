@@ -49,6 +49,15 @@ import { Alert, AlertIcon, AlertText } from "@/components/ui/alert";
 import { Textarea, TextareaInput } from "@/components/ui/textarea";
 import { Toast, ToastTitle, useToast } from "@/components/ui/toast";
 import { ChevronDownIcon, CheckIcon, AlertCircleIcon, CircleIcon } from "@/components/ui/icon";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionHeader,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionTitleText,
+  AccordionContentText,
+} from "@/components/ui/accordion";
 import { useState } from "react";
 
 export default function Index() {
@@ -166,6 +175,56 @@ export default function Index() {
               <TextareaInput placeholder="Enter your comments" />
             </Textarea>
           </FormControl>
+
+          {/* Accordion */}
+          <Box className="mb-4">
+            <Accordion type="single" isCollapsible>
+              <AccordionItem value="section1">
+                <AccordionHeader>
+                  <AccordionTrigger>
+                    <AccordionTitleText>
+                      Section 1: Getting Started
+                    </AccordionTitleText>
+                  </AccordionTrigger>
+                </AccordionHeader>
+                <AccordionContent>
+                  <AccordionContentText>
+                    This is the content for section 1. You can put any content here including text, images, or other components.
+                  </AccordionContentText>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="section2">
+                <AccordionHeader>
+                  <AccordionTrigger>
+                    <AccordionTitleText>
+                      Section 2: Advanced Features
+                    </AccordionTitleText>
+                  </AccordionTrigger>
+                </AccordionHeader>
+                <AccordionContent>
+                  <AccordionContentText>
+                    This is the content for section 2. The accordion supports multiple sections that can be expanded and collapsed.
+                  </AccordionContentText>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="section3">
+                <AccordionHeader>
+                  <AccordionTrigger>
+                    <AccordionTitleText>
+                      Section 3: Tips & Tricks
+                    </AccordionTitleText>
+                  </AccordionTrigger>
+                </AccordionHeader>
+                <AccordionContent>
+                  <AccordionContentText>
+                    This is the content for section 3. Each section can be styled independently and can contain different types of content.
+                  </AccordionContentText>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </Box>
 
           {/* Alert */}
           <Alert className="mb-4" action="success">
